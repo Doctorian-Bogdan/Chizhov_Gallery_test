@@ -17,6 +17,15 @@ class Api {
     })
       .then((res) => this._checkResponse(res));
   }
+
+  deleteUser(id) {
+    return axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((res) => this._checkResponse(res));
+  }
 }
 
 const api = new Api();

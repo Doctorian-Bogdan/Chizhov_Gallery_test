@@ -1,6 +1,6 @@
 import React from 'react';
 
-function UserItem({ data, handleDelete }) {
+function UserItem({ data, handleButton }) {
   return (
     <li className="user-item">
       <h2 className="user-item__title">
@@ -43,7 +43,7 @@ function UserItem({ data, handleDelete }) {
           </a>
         </p>
       </div>
-      <button className="user-item__button" type="button" onClick={() => handleDelete(data.id)}>
+      <button className="user-item__button" type="button" onClick={() => handleButton(data.id)}>
         Удалить пользователя
       </button>
     </li>
